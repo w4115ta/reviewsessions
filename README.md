@@ -1,2 +1,1 @@
-# reviewsessions
-Resources for PLT review sessions 
+# Programming Languages and Translators Review Session Resources
