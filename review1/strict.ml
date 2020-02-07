@@ -7,4 +7,3 @@ let rec drop n l =
 let l  = [0; 1; 2; 3; 4; 5]
 
 let l' = drop 1 (List.map (fun x -> 100 / x) l)
-
