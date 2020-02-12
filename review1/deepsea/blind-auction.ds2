@@ -1,0 +1,33 @@
+
+-- blind auction
+-- https://solidity.readthedocs.io/en/v0.5.12/solidity-by-example.html#id2
+
+-- missing events
+-- doesn't check overflow
+
+signature BLIND = sig
+
+  storage beneficiary : Address
+  storage bend : UInt
+  storage rend : UInt
+  storage ended : Bool
+
+  map withdrawals : ??
+
+  constructor c : (UInt, UInt, Address) -> Unit
+  method bid : UInt -> Unit
+  method reveal : ??
+  method withdraw : ??
+  method auctionEnd : ??
+
+end
+
+contract BlindAuction : BLIND = struct
+
+c (btime : UInt, rtime : UInt, beneficiary' : Address) = {
+  beneficiary := beneficiary';
+  bend := Env.now + btime;
+  rend := *bend + rtime;
+}
+
+end
